@@ -1,3 +1,4 @@
+package spbstu.telematics;
 public class Main {
 
     public static void main(String[] args) {
