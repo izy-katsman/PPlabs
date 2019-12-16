@@ -22,6 +22,12 @@ public class Deque<Item> implements Iterable<Item> {
         dequeSize = 0;
     }
 
+    public Item getLast(){
+        return tail.value;
+    }
+    public Item getFirst(){
+        return head.value;
+    }
     public boolean isEmpty() {
         return dequeSize == 0;
     }
