@@ -49,7 +49,6 @@ class DequeTest {
         t2.addLast(1);
 
         if(t1.size() == t2.size()){
-            assertEquals(t2.getFirst(), t1.getFirst());
             t1.removeFirst();
             t2.removeFirst();
 
@@ -72,7 +71,6 @@ class DequeTest {
         t2.addLast(1);
 
         if(t1.size() == t2.size()){
-            assertEquals(t2.getLast(), t1.getLast());
             t1.removeLast();
             t2.removeLast();
 

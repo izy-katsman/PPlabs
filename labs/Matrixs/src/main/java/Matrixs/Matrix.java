@@ -1,5 +1,7 @@
 package Matrixs;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Matrix {
     private int length;
     private int height;
@@ -37,11 +39,27 @@ public class Matrix {
         return matrix;
     }
 
-    public boolean compare(int[][] arr) {
+    public boolean compare(@org.jetbrains.annotations.NotNull int[][] arr) {
         if(this.getLengthen() == arr[0].length && this.getHeight() == arr.length) {
             for (int i = 0; i < this.getLengthen(); i++) {
                 for (int j = 0; j < this.getHeight(); j++) {
                     if(this.matrix[i][j] != arr[i][j])
+                        return false;
+                }
+            }
+            return true;
+        }
+        else
+            return false;
+    }
+
+
+
+    public boolean compare(@NotNull Matrix arr) {
+        if(this.getLengthen() == arr.matrix[0].length && this.getHeight() == arr.length) {
+            for (int i = 0; i < this.getLengthen(); i++) {
+                for (int j = 0; j < this.getHeight(); j++) {
+                    if(this.matrix[i][j] != arr.matrix[i][j])
                         return false;
                 }
             }

@@ -10,23 +10,10 @@ public class Main {
         int dem = 1000;
         int numberOfThreads = 2;
 
-        int[][] arr1 = new int[dem][dem];
-        int[][] arr2 = new int[dem][dem];
-        int[][]	summArr = new int [dem][dem];
+        Matrix arr1 = new Matrix(dem, dem, 2);
+        Matrix arr2 = new Matrix(dem, dem, 3);
+        Matrix	summArr = new Matrix(dem, dem, 0);
 
-        // Заполняем 1 массив двойками
-        for(int index1 = 0; index1 < dem; index1++) {
-            for(int  index2 = 0; index2 < dem; index2++) {
-                arr1[index1][index2] = 2;
-            }
-        }
-
-        // Заполняем 2 массив тройками
-        for(int index1 = 0; index1 < dem; index1++) {
-            for(int  index2 = 0; index2 < dem; index2++) {
-                arr2[index1][index2] = 3;
-            }
-        }
 
         Matrix mA = new Matrix(dem, dem, 2);
         Matrix mB = new Matrix(dem, dem, 3);
@@ -50,9 +37,9 @@ public class Main {
 
         for (int index1 = 0; index1 < dem; index1++) {
             for (int index2 = 0; index2 < dem; index2++) {
-                summArr[index1][index2] = 0;
+                summArr.getMatrix()[index1][index2] = 0;
                 for (int k = 0; k < dem; k++) {
-                    summArr[index1][index2] += arr1[index1][index2] * arr2[index2][index1];
+                    summArr.getMatrix()[index1][index2] += arr1.getMatrix()[index1][index2] * arr2.getMatrix()[index2][index1];
                 }
 
             }

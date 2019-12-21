@@ -29,7 +29,7 @@ public class Multiplication extends Thread {
         if(mA.getHeight() == mB.getLengthen()){
             this.dimension = mA.getLengthen();
         }
-        //todo насчет демишион тут надо проверять если не квадратные
+        //todo насчет умнажения тут надо проверять если не квадратные
     }
     public void run() {
         System.out.println(this.getName());
